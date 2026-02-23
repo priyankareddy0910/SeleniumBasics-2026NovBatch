@@ -26,6 +26,16 @@ public class Amazon {
 			
 			driver.get("https://www.amazon.in/");
 			
+			try {
+			    // Code that may throw an exception
+			    WebElement element = driver.findElement(By.id("submit_button"));
+			    element.click();
+			} catch (Exception e) {
+			    System.out.println("Element not found: " + e.getMessage());
+			}
+			
+
+			
 			driver.manage().window().maximize();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));

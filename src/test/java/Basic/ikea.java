@@ -38,7 +38,11 @@ public class ikea {
 	    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		Actions a = new Actions(driver);
-		WebElement login = driver.findElement(By.xpath("//span[text()='Hej! Log in or sign up']"));
+	
+	Select s = new Select(null);
+	
+	
+		WebElement login = driver.findElement(By.xpath("//span[text()='Hej! Log in']"));
 		a.moveToElement(login).click().build().perform();
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[contains(text(),'Join IKEA Family')]")));
         driver.findElement(By.xpath("//h3[text()='Join IKEA Family']")).click();

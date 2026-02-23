@@ -39,6 +39,10 @@ public class Neha {
 		
 		data.click();
 		
+		driver.switchTo().alert();
+		
+
+		
 		}
 		
 	}
